@@ -6,7 +6,7 @@ export default class Alerts extends React.Component {
   static navigationOptions = {
 
    tabBarIcon: ({ tintColor }) => (
-       <EvilIcons name="bell" size={32} color="white" style={[ { tintColor: tintColor }]} />
+       <EvilIcons name="bell" size={32} color="white" /*style={[ { tintColor: tintColor }]}*/ />
 
     ),
   }

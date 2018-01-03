@@ -5,7 +5,7 @@ export default class Mail extends React.Component {
   static navigationOptions = {
 
     tabBarIcon: ({ tintColor }) => (
-        <Icon name="mail" style={[ { tintColor: tintColor }]}  />
+        <Icon name="mail" /*style={[ { tintColor: tintColor }]}*/  />
 
     )
   }

@@ -1,15 +1,23 @@
 import React from 'react';
-import { AppRegistry, ScrollView, Image, Text} from 'react-native';
-import { Button,  Icon, Footer, FooterTab, Header, Left,Right,Content,Card,CardItem ,Container,Body,Thumbnail} from "native-base";
+import { AppRegistry, ScrollView, Image, StyleSheet,TouchableOpacity,View} from 'react-native';
+import { Button,  Icon, Footer, FooterTab, Header, Left,Right,Content,Card,CardItem ,Container,Body,Thumbnail,  Item, Input,  Text,} from "native-base";
 import { EvilIcons,MaterialIcons,Ionicons,MaterialCommunityIcons, Feather } from '@expo/vector-icons';
+import { Font } from 'expo';
 export default class Home extends React.Component {
+  componentDidMount() {
+    Font.loadAsync({
+      //'open-sans-bold': require('./assets/fonts/OpenSans-Bold.ttf'),
+      'Roboto_medium': require('./assets/fonts/Roboto-Medium.ttf'),
+    });
+  }
   static navigationOptions = {
-    title: 'Home',
+  //  title: 'Home',
     tabBarLabel: 'Home',
     tabBarIcon: ({ tintColor }) => (
-        <Icon name="home" style={[{ tintColor: tintColor }]}  />
+        <Icon name="home" /*style={[{ tintColor: tintColor }]}*/  />
 
-    )
+    ),
+    header:<View style={{flexDirection:'row'}}><Thumbnail small source={require('./face4.png')} style={{left:10}} /><Text style={{left:15,padding:5, fontSize:20}} >Home</Text></View>
   }
   render() {
       const { navigate } = this.props.navigation
@@ -145,8 +153,39 @@ export default class Home extends React.Component {
         </Card>
         </ScrollView>
       </Content>
+      <Footer>
+
+
+
+            <Text style={styles.red} >All</Text>
+
+
+
+            <Text style={styles.red}>Mentions</Text>
+
+
+          <Right >
+            <Icon style={styles.bigblue} name="ios-settings-outline" />
+
+          </Right>
+
+      </Footer>
+
     </Container>
 
     );
   }
 }
+const styles = StyleSheet.create({
+  bigblue: {
+    padding:10,
+    color: 'blue',
+
+
+  },
+  red: {
+    padding: 10,
+    fontSize: 30,
+
+  },
+});
