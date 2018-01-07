@@ -7,7 +7,7 @@ import Search from './Search.js';
 import Alerts from './Alerts.js';
 import Mail from './Mail.js';
 export const Tabs = TabNavigator({
-  Home: {
+ Home: {
     screen: Home,
   },
   Search: {

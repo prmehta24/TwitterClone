@@ -1,20 +1,16 @@
 import React from 'react';
-import { AppRegistry, ScrollView, Image, StyleSheet,TouchableOpacity,View} from 'react-native';
-import { Button,  Icon, Footer, FooterTab, Header, Left,Right,Content,Card,CardItem ,Container,Body,Thumbnail,  Item, Input,  Text,} from "native-base";
-import { EvilIcons,MaterialIcons,Ionicons,MaterialCommunityIcons, Feather } from '@expo/vector-icons';
-import { Font } from 'expo';
+import { AppRegistry, ScrollView, Image, StyleSheet,TouchableOpacity} from 'react-native';
+import { Button,  Icon, Footer, FooterTab, Header, Left,Right,Content,Card,CardItem ,Container,Body,Thumbnail,  Item, Input,  Text,Fab ,View,Spinner} from "native-base";
+import { EvilIcons,MaterialIcons,Ionicons,MaterialCommunityIcons, Feather,Entypo } from '@expo/vector-icons';
+
 export default class Home extends React.Component {
-  componentDidMount() {
-    Font.loadAsync({
-      //'open-sans-bold': require('./assets/fonts/OpenSans-Bold.ttf'),
-      'Roboto_medium': require('./assets/fonts/Roboto-Medium.ttf'),
-    });
-  }
+
+
   static navigationOptions = {
   //  title: 'Home',
     tabBarLabel: 'Home',
     tabBarIcon: ({ tintColor }) => (
-        <Icon name="home" /*style={[{ tintColor: tintColor }]}*/  />
+        <Icon name="home"   />
 
     ),
     header:<View style={{flexDirection:'row'}}><Thumbnail small source={require('./face4.png')} style={{left:10}} /><Text style={{left:15,padding:5, fontSize:20}} >Home</Text></View>
@@ -25,9 +21,23 @@ export default class Home extends React.Component {
 
 
         <Container>
-      <Header />
+
+        <Fab
+          active="false"
+
+          style={{ backgroundColor: '#5067FF',position: "absolute", bottom: 45, right: 0  }}
+          position="bottomRight"
+          >
+
+          <Entypo name="new-message" />
+
+        </Fab>
+
       <Content>
+<Spinner />
+
       <ScrollView>
+
         <Card>
           <CardItem>
             <Left>
@@ -53,7 +63,7 @@ export default class Home extends React.Component {
 
 
               <Button transparent>
-                <EvilIcons name="refresh"  size={20} />
+                <EvilIcons name="retweet"  size={20} />
                 <Text>4</Text>
               </Button>
               <Button transparent>
@@ -94,7 +104,7 @@ export default class Home extends React.Component {
 
 
               <Button transparent>
-                <EvilIcons name="refresh"  size={20} />
+                <EvilIcons name="retweet"  size={20} />
                 <Text>7</Text>
               </Button>
               <Button transparent>
@@ -135,7 +145,7 @@ export default class Home extends React.Component {
 
 
               <Button transparent>
-                <EvilIcons name="refresh"  size={20} />
+                <EvilIcons name="retweet"  size={20} />
                 <Text>10</Text>
               </Button>
               <Button transparent>
@@ -152,8 +162,9 @@ export default class Home extends React.Component {
           </CardItem>
         </Card>
         </ScrollView>
+
       </Content>
-      <Footer>
+      <Footer style={{backgroundColor:"white"}}>
 
 
 
@@ -165,7 +176,7 @@ export default class Home extends React.Component {
 
 
           <Right >
-            <Icon style={styles.bigblue} name="ios-settings-outline" />
+            <Icon style={styles.bigblue} name="ios-settings-outline" size={20} />
 
           </Right>
 
@@ -173,19 +184,19 @@ export default class Home extends React.Component {
 
     </Container>
 
-    );
-  }
+  );
+}
 }
 const styles = StyleSheet.create({
   bigblue: {
     padding:10,
-    color: 'blue',
+    color: '#42d4f4',
 
 
   },
   red: {
     padding: 10,
-    fontSize: 30,
+    fontSize: 15,
 
   },
 });
