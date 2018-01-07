@@ -9,23 +9,25 @@ export default class Home extends React.Component {
   static navigationOptions = {
   //  title: 'Home',
     tabBarLabel: 'Home',
+
+
     tabBarIcon: ({ tintColor }) => (
         <Icon name="home"   />
 
     ),
-    header:<View style={{flexDirection:'row'}}><Thumbnail small source={require('./face4.png')} style={{left:10}} /><Text style={{left:15,padding:5, fontSize:20}} >Home</Text></View>
+    header:<View style={{flexDirection:'row',marginTop:30,backgroundColor:"white"}}><Thumbnail small source={require('./face4.png')} style={{left:10}} /><Text style={{left:15,padding:5, fontSize:20}} >Home</Text></View>
   }
   render() {
       const { navigate } = this.props.navigation
       return (
 
 
-        <Container>
+        <Container style={{backgroundColor:"white"}}>
 
         <Fab
           active="false"
 
-          style={{ backgroundColor: '#5067FF',position: "absolute", bottom: 45, right: 0  }}
+          style={{ backgroundColor: '#1DA1F2',position: "absolute", bottom: 45, right: 0  }}
           position="bottomRight"
           >
 
@@ -34,22 +36,22 @@ export default class Home extends React.Component {
         </Fab>
 
       <Content>
-<Spinner />
+<Spinner color="#1DA1F2"/>
 
-      <ScrollView>
+      <ScrollView >
 
         <Card>
           <CardItem>
             <Left>
               <Thumbnail source={require('./face1.jpg')} />
               <Body>
-                <Text>NativeBase</Text>
-                <Text note>GeekyAnts</Text>
+                <Text>Martina Belsic</Text>
+                <Text note>The world is a stage and we are the actors!</Text>
               </Body>
             </Left>
           </CardItem>
-          <CardItem cardBody>
-            <Image source={require('./card1.jpg')} style={{height: 200, width: null, flex: 1}}/>
+          <CardItem cardBody style={{marginLeft:20,marginRight:5}}>
+            <Image borderRadius={5} source={require('./card1.jpg')} style={{height: 200, width: null, flex: 1,}}/>
           </CardItem>
           <CardItem style={{flex: 1, flexDirection: 'row', justifyContent: 'space-between',}}>
 
@@ -84,13 +86,13 @@ export default class Home extends React.Component {
             <Left>
               <Thumbnail source={require('./face2.jpg')} />
               <Body>
-                <Text>NativeBase</Text>
-                <Text note>GeekyAnts</Text>
+                <Text>John Huntre</Text>
+                <Text note>It was a trial by 'fire'. Sink or Swim!</Text>
               </Body>
             </Left>
           </CardItem>
-          <CardItem cardBody>
-            <Image source={require('./card2.jpeg')} style={{height: 200, width: null, flex: 1}}/>
+          <CardItem cardBody style={{marginLeft:20,marginRight:5}}>
+            <Image borderRadius={5} source={require('./card2.jpeg')} style={{height: 200, width: null, flex: 1}}/>
           </CardItem>
           <CardItem style={{flex: 1, flexDirection: 'row', justifyContent: 'space-between',}}>
 
@@ -125,13 +127,13 @@ export default class Home extends React.Component {
             <Left>
               <Thumbnail source={require('./face3.jpg')} />
               <Body>
-                <Text>NativeBase</Text>
-                <Text note>GeekyAnts</Text>
+                <Text>The Master Artist</Text>
+                <Text note>Can anyones guess what it is?</Text>
               </Body>
             </Left>
           </CardItem>
-          <CardItem cardBody>
-            <Image source={require('./card3.jpg')} style={{height: 200, width: null, flex: 1}}/>
+          <CardItem cardBody style={{marginLeft:20,marginRight:5}}>
+            <Image borderRadius={5} source={require('./card3.jpg')} style={{height: 200, width: null, flex: 1}}/>
           </CardItem>
           <CardItem style={{flex: 1, flexDirection: 'row', justifyContent: 'space-between',}}>
 
@@ -168,11 +170,11 @@ export default class Home extends React.Component {
 
 
 
-            <Text style={styles.red} >All</Text>
+            <Text style={{padding: 10,fontSize: 20,color:"#1DA1F2"}} >All</Text>
 
 
 
-            <Text style={styles.red}>Mentions</Text>
+            <Text style={{padding: 10,fontSize: 20,color:'grey'}}>Mentions</Text>
 
 
           <Right >
@@ -190,13 +192,13 @@ export default class Home extends React.Component {
 const styles = StyleSheet.create({
   bigblue: {
     padding:10,
-    color: '#42d4f4',
+    color: '#1DA1F2',
 
 
   },
   red: {
-    padding: 10,
-    fontSize: 15,
+    padding: 20,
+    fontSize: 20,
 
   },
 });

@@ -22,9 +22,15 @@ export const Tabs = TabNavigator({
 
 {
   tabBarOptions: {
-    activeTintColor: '#7567B1',
+    activeTintColor: 'blue',
+    inactiveBackgroundColor:'white',
+    activeBackgroundColor:'white',
+
     showIcon: true,
     showLabel: false,
+    style: {
+    backgroundColor: 'white',
+  },
 
   }},
 );

@@ -5,8 +5,13 @@ Made with React Native.
 Features:
 
 Twitter timeline
+
 Twitter profile menu
+
 Twitter search box
+
+Check the screenshots folder for the above.
+
 Go to the following link: http://docs.nativebase.io/docs/GetStarted.html
 
 Follow the instructions for Setup with CRNA

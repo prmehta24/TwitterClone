@@ -16,10 +16,10 @@ export default class Search extends React.Component {
    tabBarIcon: ({ tintColor }) => (
       <Icon name="search" /*style={[{ tintColor: tintColor }]}*/  />),
        tabBarVisible: false ,
-       header:   <View style={{flex: 1, flexDirection: 'row'}}><Button transparent   style={{left: 5}}><Ionicons name="ios-arrow-round-back-outline" size={40}/></Button><SearchBar
+       header:   <View style={{flex: 1, flexDirection: 'row',marginTop:30}}><Button transparent   style={{left: 5}}><Ionicons style={{color:'#1DA1F2'}} name="ios-arrow-round-back-outline" size={40}/></Button><SearchBar
           lightTheme
           noIcon
-          inputStyle={{margin: 0}}
+          inputStyle={{margin: 0,backgroundColor:"white"}}
           containerStyle={{left:10 , width: 300}}
           //onChangeText={}
           placeholder='Search Twitter' /></View>,
@@ -29,21 +29,21 @@ export default class Search extends React.Component {
   render() {
     const { navigate } = this.props.navigation
       return (
-        <Container>
+        <Container style={{}}>
         <Content/>
-        <Footer>
+        <Footer style={{backgroundColor:"white"}}>
 
 
 
-              <Text style={styles.red} >All</Text>
+              <Text style={{padding: 10,fontSize: 20,color:"#1DA1F2"}} >All</Text>
 
 
 
-              <Text style={styles.red}>Mentions</Text>
+              <Text style={{padding: 10,fontSize: 20,color:'grey'}}>Mentions</Text>
 
 
             <Right >
-              <Icon style={styles.bigblue} name="ios-settings-outline" />
+              <Icon style={styles.bigblue} name="ios-settings-outline" size={20} />
 
             </Right>
 
@@ -55,13 +55,13 @@ export default class Search extends React.Component {
 const styles = StyleSheet.create({
   bigblue: {
     padding:10,
-    color: 'blue',
+    color: '#1DA1F2',
 
 
   },
   red: {
-    padding: 10,
-    fontSize: 30,
+    padding: 20,
+    fontSize: 20,
 
   },
 });

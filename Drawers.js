@@ -89,7 +89,7 @@ drawerToggleRoute: 'DrawerToggle',
         <Header style={{height:150,backgroundColor:"white"}}>
         <View style={{flex: 1, flexDirection: 'column',marginTop:30,marginLeft:10}}>
         <View><Thumbnail small source={require('./face4.png')} style={{left:10}} /></View>
-      <View style={{marginBottom:2,marginTop:2}}><Text style={{fontWeight:"bold"}}>Bob Graham</Text><Right><Ionicons  style={{right:-100, color:"#42d4f4" }} name="ios-arrow-down" size={15}/></Right></View>
+      <View style={{marginBottom:2,marginTop:2}}><Text style={{fontWeight:"bold"}}>Bob Graham</Text><Right><Ionicons  style={{right:-100, color:"#1DA1F2" }} name="ios-arrow-down" size={15}/></Right></View>
       <View style={{marginBottom:2,marginTop:2}}><Text style={{color:"grey",fontSize:15}}>@Bob_G</Text></View>
       <View style={{marginBottom:2,marginTop:2,flexDirection: 'row'}}><Text style={{fontWeight:"bold",fontSize:15}}>191</Text><Text style={{color:"grey",fontSize:15}}> Following   </Text><Text style={{fontWeight:"bold",fontSize:15}}>  263</Text><Text style={{color:"grey",fontSize:15}}> Followers</Text></View>
 
@@ -101,8 +101,8 @@ drawerToggleRoute: 'DrawerToggle',
 
         <ScrollView ><DrawerItems {...props} /></ScrollView>
         </Content>
-        <Footer style={{backgroundColor:"white",}}><Left><Ionicons  style={{color:"#42d4f4",paddingLeft:20}} name="ios-moon-outline" size={20}/></Left>
-         <Right><MaterialCommunityIcons   style={{color:"#42d4f4",paddingRight:20}} name="qrcode" size={20}/></Right></Footer>
+        <Footer style={{backgroundColor:"white",}}><Left><Ionicons  style={{color:"#1DA1F2",paddingLeft:20}} name="ios-moon-outline" size={20}/></Left>
+         <Right><MaterialCommunityIcons   style={{color:"#1DA1F2",paddingRight:20}} name="qrcode" size={20}/></Right></Footer>
       </Container>
 
 },
